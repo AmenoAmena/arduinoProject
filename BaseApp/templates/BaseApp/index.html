@@ -29,7 +29,7 @@
                 <td><p>{{part.name}}</p></td>
                 <td><img src="{{part.image.image.url}}" alt="{{part.name}}'in resmi" id="SensörResmi"></td>
                 <td><p>{{part.number}}</p></td>
-                <td><a href="" class="islem"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td><form method="post"><a href="{% url 'update' pk=part.id %}" class="islem"><i class="fa-solid fa-pen-to-square"></i></a></form> <a href="{% url 'delete' pk=part.id %}"><i class="fa-solid fa-trash"></i></a>                </td>
             </tr>
         {% endfor %}
     </tbody>

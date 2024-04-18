@@ -1,0 +1,13 @@
+{% extends 'BaseApp/base.html' %}
+{% block title %}
+<title>Yenileme</title>
+{% endblock title %}
+
+{% block body %}
+<h1>Update Item</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+</form>
+{% endblock %}
