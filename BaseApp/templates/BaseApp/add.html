@@ -1,0 +1,17 @@
+{% extends 'BaseApp/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Ürün ekle</title>
+<link rel="stylesheet" href="{% static 'BaseApp/css/add.css' %}">
+
+{% endblock title %}
+
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Ekle</button>
+</form>
+<a href="{% url 'index' %}">Sensörleri gör</a>
+{% endblock body %}

@@ -1,0 +1,39 @@
+{% extends 'BaseApp/base.html' %}
+{% load static %}
+
+{% block title %}
+
+<title>Depo</title>
+<link rel="stylesheet" href="{% static 'BaseApp/css/index.css' %}" type="text/css">
+{% endblock %}
+
+
+{% block body %}
+
+
+<h1>Depo</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>İsim</td>
+            <td>Resim</td>
+            <td>Sayı</td>
+            <td>İşlemler</td>
+        </tr>
+        
+    </thead>
+    <tbody>
+        {% for part in items %}
+            <tr>
+                <td><p>{{part.name}}</p></td>
+                <td><img src="{{part.image.image.url}}" alt="{{part.name}}'in resmi" id="SensörResmi"></td>
+                <td><p>{{part.number}}</p></td>
+                <td><a href="" class="islem"><i class="fa-solid fa-pen-to-square"></i></a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'add' %}" id="add">Sensör ekle</a>
+
+{% endblock body %}

@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+  text-decoration: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  td img {
+    display: block;
+    margin: 0 auto;
+    height: 10vh;
+  }
+  
+  td a {
+    color: blue;
+  }
+  
+  td a:hover {
+    color: black;
+  }
+
+  td:nth-child(1), 
+  td:nth-child(3) { 
+    text-align: center;
+  }
+
+#add {
+  text-decoration: none;
+  color: blue;
+}
+#add:hover {
+  color: #000;
+  text-decoration: underline;
+}
