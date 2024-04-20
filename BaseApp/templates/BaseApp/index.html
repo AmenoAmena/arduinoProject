@@ -5,6 +5,11 @@
 
 <title>Depo</title>
 <link rel="stylesheet" href="{% static 'BaseApp/css/index.css' %}" type="text/css">
+
+{% if not user.is_authenticated  %}
+<a href="{% url 'accounts/login' %}">Login</a>
+{% endif %}
+
 {% endblock %}
 
 
@@ -12,6 +17,8 @@
 
 
 <h1>Depo</h1>
+{{user.username}}
+
 
 <table border="1">
     <thead>

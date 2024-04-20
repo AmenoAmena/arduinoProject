@@ -10,7 +10,7 @@
 {% block body %}
 <form method="post">
     {% csrf_token %}
-    {{form}}
+    {{form.as_p}}
     <button type="submit">Ekle</button>
 </form>
 <a href="{% url 'index' %}">Sensörleri gör</a>
