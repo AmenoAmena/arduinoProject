@@ -10,9 +10,9 @@
 <form method="post">
     {% csrf_token %}
     <label for="username">Kullanıcı Adı:</label>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="username" autofocus="off">
     <br>
-    <label for="password">Şifre:</label>
+    <label for="password" autofocus="off">Şifre:</label>
     <input type="password" id="password" name="password">
     <br>
     <button type="submit">Giriş</button>

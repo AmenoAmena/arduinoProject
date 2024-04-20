@@ -1,0 +1,17 @@
+{% extends 'BaseApp/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Kayıt ol</title>
+{% endblock title %}
+
+{% block body %}
+
+<h2>Kayıt ol</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Kayıt ol</button>
+</form>
+
+{% endblock body %}

@@ -1,0 +1,19 @@
+{% extends 'BaseApp/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Profil</title>
+<link rel="stylesheet" href="{% static 'BaseApp/css/profile.css' %}">
+{% endblock title %}
+
+{% block body %}
+
+<h2>{{user.username}}</h2>
+<a href="{% url 'index' %}">Sensörler</a>
+<br>
+<a href="{% url 'logout' %}">Çıkış</a>
+<br>
+<br>
+<br>
+<a href="{% url 'delete_user' %}">Hesabı Sil</a>
+{% endblock body %}

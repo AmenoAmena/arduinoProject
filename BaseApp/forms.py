@@ -1,5 +1,16 @@
 from django import forms
 from .models import item, sensorImage
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
+class SignupForm(UserCreationForm):
+    username = forms.CharField(max_length=40,label='Kullanıcı adı',widget=forms.TextInput)
+    password1 = forms.CharField(label='Şifre', widget=forms.PasswordInput,)
+    password2 = forms.CharField(label='Yeniden Şifre', widget=forms.PasswordInput,)
+
+    class Meta:
+        model = User
+        fields = ('username', 'password1', 'password2')
 
 class itemForm(forms.ModelForm):
 

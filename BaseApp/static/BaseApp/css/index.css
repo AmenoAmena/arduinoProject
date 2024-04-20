@@ -38,3 +38,15 @@ table {
   color: #000;
   text-decoration: underline;
 }
+
+.profile {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+}
+.profile > a {
+  color: #000;
+}
+.profile > a:hover {
+  color: blue;
+}

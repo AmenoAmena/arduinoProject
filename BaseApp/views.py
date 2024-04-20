@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .forms import itemForm
+from .forms import itemForm,SignupForm
 from .models import sensorImage, item
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login,logout
@@ -86,7 +86,31 @@ def user_login(request):
             messages.error(request, 'Invalid username or password')
     return render(request, 'BaseApp/login.html')
 
-
+@login_required
 def user_logout(request):
     logout(request)
     return redirect('login')
+
+def see_profile(request):
+    user = request.user
+    return render(request, 'BaseApp/profile.html',{
+        "user":user
+    })
+
+@login_required
+def delete_user(request):
+    user = request.user
+    user.delete()
+    return render(request, 'BaseApp/login.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = SignupForm()
+    return render(request, 'BaseApp/register.html',{
+        'form':form
+    })

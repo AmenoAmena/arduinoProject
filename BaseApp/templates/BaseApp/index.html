@@ -6,18 +6,24 @@
 <title>Depo</title>
 <link rel="stylesheet" href="{% static 'BaseApp/css/index.css' %}" type="text/css">
 
-{% if not user.is_authenticated  %}
-<a href="{% url 'accounts/login' %}">Login</a>
-{% endif %}
+
 
 {% endblock %}
 
 
 {% block body %}
 
+{% if not user.is_authenticated  %}
+    <a href="{% url 'accounts/login' %}">Login</a>
+{% endif %}
 
 <h1>Depo</h1>
+
+<div class="profile">
+<a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+<br>
 {{user.username}}
+</div>
 
 
 <table border="1">
