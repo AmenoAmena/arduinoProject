@@ -1,7 +1,31 @@
-body > a {
-    color: blue;
-    text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-body > a:hover {
-    color: black;
+
+body {
+  background: #12B4E3;
+  overflow: hidden;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
 }

@@ -1,23 +1,30 @@
 {% extends 'BaseApp/base.html' %}
+{% load static %}
+
 {% block title %}
 <title>Giriş</title>
+<link rel="stylesheet" href="{% static 'BaseApp/css/login.css' %}">
 {% endblock title%}
 
 {% block body %}
-
-<h2>Giriş</h2>
-
-<form method="post">
-    {% csrf_token %}
-    <label for="username">Kullanıcı Adı:</label>
-    <input type="text" id="username" name="username" autofocus="off">
-    <br>
-    <label for="password" autofocus="off">Şifre:</label>
-    <input type="password" id="password" name="password">
-    <br>
-    <button type="submit">Giriş</button>
-</form>
-
-<a href="{% url 'register' %}">Kayıt ol</a>
-
+<div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Giriş</span></div>
+      <form method="post">
+        {% csrf_token %}
+        <div class="row">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Kullanıcı adı" id="username" name="username" required autofocus="off" autocomplete="off">
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Şifre" id="password" name="password" required autofocus="off" autocomplete="off">
+        </div>
+        <div class="row button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Hesabın yok mu? <a href="{% url 'register' %}">Kayıt ol</a></div>
+      </form>
+    </div>
+  </div>
 {% endblock %}

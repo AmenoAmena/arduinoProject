@@ -2,16 +2,33 @@
 {% load static %}
 
 {% block title %}
-<title>Kayıt ol</title>
+<title>Giriş</title>
+<link rel="stylesheet" href="{% static 'BaseApp/css/login.css' %}">
 {% endblock title %}
 
 {% block body %}
-
-<h2>Kayıt ol</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Kayıt ol</button>
-</form>
-
-{% endblock body %}
+<div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Kayıt Ol</span></div>
+      <form method="post">
+        {% csrf_token %}
+        <div class="row">
+          <i class="fas fa-user"></i>
+          {{ form.username }}
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          {{ form.password1 }}
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          {{ form.password2 }}
+        </div>
+        <div class="row button">
+          <input type="submit" value="Giriş">
+        </div>
+        <div class="signup-link">Hesabın var mu? <a href="{% url 'login' %}">Giriş yap</a></div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

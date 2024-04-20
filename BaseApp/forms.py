@@ -4,9 +4,18 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 class SignupForm(UserCreationForm):
-    username = forms.CharField(max_length=40,label='Kullanıcı adı',widget=forms.TextInput)
-    password1 = forms.CharField(label='Şifre', widget=forms.PasswordInput,)
-    password2 = forms.CharField(label='Yeniden Şifre', widget=forms.PasswordInput,)
+    username = forms.CharField(max_length=40,label='Kullanıcı adı',widget=forms.TextInput(attrs={
+        'placeholder':'Kullanıcı Adı',
+        'autocomplete':'off'
+        }))
+    password1 = forms.CharField(label='Şifre', widget=forms.PasswordInput(attrs={
+        'placeholder': 'Şifre',
+        'autocomplete':'off'
+        }))
+    password2 = forms.CharField(label='Yeniden Şifre', widget=forms.PasswordInput(attrs={
+        'placeholder': 'Şifreyi doğrulayın',
+        'autocomplete':'off'
+        }))
 
     class Meta:
         model = User
