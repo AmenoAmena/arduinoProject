@@ -1,13 +1,35 @@
 {% extends 'BaseApp/base.html' %}
+{% load static %}
+
 {% block title %}
-<title>Yenileme</title>
+    <title>Ürün Ekle</title>
+    <link rel="stylesheet" href="{% static 'BaseApp/css/add.css' %}">
 {% endblock title %}
 
 {% block body %}
-<h1>Update Item</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Update</button>
-</form>
+<div class="container">
+    <img src="{% static 'BaseApp/img/blackArduino.svg' %}" alt="Arduino Resmi">
+    <div class="wrapper">
+      <div class="title"><span>Ürün ekle</span></div>
+      <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <i class="fa-solid fa-a"></i>          
+            {{ form.name }}
+        </div>
+        <div class="row">
+            <i class="fa-solid fa-plug"></i>          
+            {{ form.image }}
+        </div>
+        <div class="row">
+            <i class="fa-solid fa-box"></i>            
+            {{ form.number }}
+        </div>
+        <div class="row button">
+          <input type="submit" value="Ekle">
+        </div>
+        <div class="signup-link"><a href="{% url 'login' %}">Sensörler</a></div>
+      </form>
+    </div>
+  </div>
 {% endblock %}

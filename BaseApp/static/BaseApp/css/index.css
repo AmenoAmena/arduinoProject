@@ -1,52 +1,101 @@
-body {
-  text-align: center;
-  text-decoration: none;
+.container {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
 }
-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-  td img {
-    display: block;
-    margin: 0 auto;
-    height: 10vh;
-  }
-  
-  td a {
-    color: blue;
-  }
-  
-  td a:hover {
-    color: black;
-  }
 
-  td:nth-child(1), 
-  td:nth-child(3) { 
-    text-align: center;
-  }
-
-#add {
-  text-decoration: none;
-  color: blue;
-}
-#add:hover {
-  color: #000;
-  text-decoration: underline;
+.container h1 {
+  background: #0DABC9;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px 0;
+  margin: 0;
 }
 
 .profile {
   position: absolute;
-  top: 5%;
-  left: 80%;
+  top: 20px;
+  right: 20px;
 }
-.profile > a {
+
+.profile a {
+  color: #000;
+  text-decoration: none;
+}
+
+.profile a:hover {
+  color: #0DABC9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+td img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100px;
+}
+
+td a {
+  color: #0DABC9;
+  text-decoration: none;
+}
+
+td a:hover {
   color: #000;
 }
-.profile > a:hover {
-  color: blue;
+
+td:nth-child(1),
+td:nth-child(3) {
+  text-align: center;
+}
+
+#add {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #0DABC9;
+  border: 1px solid #0DABC9;
+  border-radius: 5px;
+}
+
+#add:hover {
+  color: #fff;
+  background: #0DABC9;
+}
+
+.container > img {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  height: 25%;
+  width: auto;
+  color: #0DABC9;
+}
+#logo {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  height: 10%;
+  width: auto;
+  color: #0A92AB;
 }

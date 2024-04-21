@@ -9,6 +9,7 @@ body{
   background: #12B4E3;
   overflow: hidden;
 }
+
 ::selection{
   background: rgba(26,188,156,0.3);
 }
@@ -106,4 +107,12 @@ form .button input:hover{
 }
 form .signup-link a:hover{
   text-decoration: underline;
+}
+.container > img {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  height: 25%;
+  width: auto;
+  color: #0A92AB;
 }

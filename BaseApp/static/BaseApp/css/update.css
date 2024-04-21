@@ -169,21 +169,20 @@ form .signup-link a:hover {
     background: #0DABC9;
     border: 1px solid #0DABC9;
     cursor: pointer;
-    padding: 10px 0;
-    width: 100%; 
+    padding: 10px 0; /* Adjusted padding */
+    width: 100%; /* Added width to fill the container */
     border-radius: 5px;
     outline: none;
     transition: background 0.3s ease;
-    text-align: center; 
+    text-align: center; /* Centering the text */
 }
 
-
-img {
+.container > img {
     position: absolute;
     top: 2%;
     left: 2%;
     height: 25%;
     width: auto;
     color: #0A92AB;
-}
+  }
   
