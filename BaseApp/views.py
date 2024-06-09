@@ -89,7 +89,7 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return redirect('login')
+    return redirect('index')
 
 def see_profile(request):
     user = request.user

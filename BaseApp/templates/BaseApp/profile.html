@@ -10,12 +10,12 @@
 
 <img src="{% static 'BaseApp/img/blackArduino.svg' %}" alt="Arduino Resmi">
 
-<h2>{{user.username}}</h2>
-<a href="{% url 'index' %}">Sensörler</a>
+<h2 style="color:black;">{{user.username}}</h2>
+<a href="{% url 'index' %}">Sensors</a>
 <br>
-<a href="{% url 'logout' %}">Çıkış</a>
+<a href="{% url 'logout' %}">Log out</a>
 <br>
 <br>
 <br>
-<a href="{% url 'delete_user' %}">Hesabı Sil</a>
+<a href="{% url 'delete_user' %}">Delete account</a>
 {% endblock body %}

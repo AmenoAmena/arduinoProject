@@ -10,21 +10,21 @@
 <div class="container">
   <img src="{% static 'BaseApp/img/blackArduino.svg' %}" alt="Arduino Resmi">
     <div class="wrapper">
-      <div class="title"><span>Giriş</span></div>
+      <div class="title"><span>Login</span></div>
       <form method="post">
         {% csrf_token %}
         <div class="row">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="Kullanıcı adı" id="username" name="username" required autofocus="off" autocomplete="off">
+          <input type="text" placeholder="Username: " id="username" name="username" required autofocus="off" autocomplete="off">
         </div>
         <div class="row">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Şifre" id="password" name="password" required autofocus="off" autocomplete="off">
+          <input type="password" placeholder="Password: " id="password" name="password" required autofocus="off" autocomplete="off">
         </div>
         <div class="row button">
           <input type="submit" value="Login">
         </div>
-        <div class="signup-link">Hesabın yok mu? <a href="{% url 'register' %}">Kayıt ol</a></div>
+        <div class="signup-link">Don't have an account? <a href="{% url 'register' %}">Register</a></div>
       </form>
     </div>
   </div>

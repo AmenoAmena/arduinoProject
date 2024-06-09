@@ -17,7 +17,7 @@
     <a href="{% url 'accounts/login' %}">Login</a>
 {% endif %}
 
-<h1 style="text-align:center;">Depo</h1>
+<h1 style="text-align:center;">Arduino Storage</h1>
 <img src="{% static 'BaseApp/img/blackArduino.svg' %}" alt="Arduino Resmi" id="logo">
 
 <div class="profile">
@@ -30,10 +30,10 @@
 <table border="1">
     <thead>
         <tr>
-            <td>İsim</td>
-            <td>Resim</td>
-            <td>Sayı</td>
-            <td>İşlemler</td>
+            <td>Name</td>
+            <td>İmage</td>
+            <td>Number</td>
+            <td>Tools</td>
         </tr>
         
     </thead>
@@ -48,6 +48,6 @@
         {% endfor %}
     </tbody>
 </table>
-<a href="{% url 'add' %}" id="add">Sensör ekle</a>
+<a href="{% url 'add' %}" id="add">Add sensor</a>
 
 {% endblock body %}

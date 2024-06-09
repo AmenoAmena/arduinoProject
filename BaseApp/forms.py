@@ -37,7 +37,7 @@ class itemForm(forms.ModelForm):
 
         self.fields['image'].queryset = sensorImage.objects.all()
         self.fields['image'].label_from_instance = lambda obj: obj.name
-        self.fields['image'].empty_label = 'Model Seçiniz'
+        self.fields['image'].empty_label = 'Choose a sensor'
 
         self.fields['name'].widget.attrs['autocomplete'] = 'off'
         self.fields['image'].widget.attrs['autocomplete'] = 'off'

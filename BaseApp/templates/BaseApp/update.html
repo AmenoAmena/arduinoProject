@@ -10,7 +10,7 @@
 <div class="container">
     <img src="{% static 'BaseApp/img/blackArduino.svg' %}" alt="Arduino Resmi">
     <div class="wrapper">
-      <div class="title"><span>Ürün ekle</span></div>
+      <div class="title"><span>Update sensor</span></div>
       <form method="post">
         {% csrf_token %}
         <div class="row">
@@ -26,9 +26,9 @@
             {{ form.number }}
         </div>
         <div class="row button">
-          <input type="submit" value="Ekle">
+          <input type="submit" value="Update">
         </div>
-        <div class="signup-link"><a href="{% url 'login' %}">Sensörler</a></div>
+        <div class="signup-link"><a href="{% url 'index' %}">Sensors</a></div>
       </form>
     </div>
   </div>

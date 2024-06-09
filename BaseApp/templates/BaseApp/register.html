@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-<title>Giriş</title>
+<title>Register</title>
 <link rel="stylesheet" href="{% static 'BaseApp/css/login.css' %}">
 {% endblock title %}
 
@@ -10,7 +10,7 @@
 <div class="container">
   <img src="{% static 'BaseApp/img/blackArduino.svg' %}" alt="Arduino Resmi">
     <div class="wrapper">
-      <div class="title"><span>Kayıt Ol</span></div>
+      <div class="title"><span>Register</span></div>
       <form method="post">
         {% csrf_token %}
         <div class="row">
@@ -26,9 +26,9 @@
           {{ form.password2 }}
         </div>
         <div class="row button">
-          <input type="submit" value="Giriş">
+          <input type="submit" value="Register">
         </div>
-        <div class="signup-link">Hesabın var mu? <a href="{% url 'login' %}">Giriş yap</a></div>
+        <div class="signup-link">Have an account? <a href="{% url 'login' %}">Log in</a></div>
       </form>
     </div>
   </div>
