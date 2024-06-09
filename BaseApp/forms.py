@@ -5,15 +5,15 @@ from django.contrib.auth.models import User
 
 class SignupForm(UserCreationForm):
     username = forms.CharField(max_length=40,label='Kullanıcı adı',widget=forms.TextInput(attrs={
-        'placeholder':'Kullanıcı Adı',
+        'placeholder':'Username: ',
         'autocomplete':'off'
         }))
     password1 = forms.CharField(label='Şifre', widget=forms.PasswordInput(attrs={
-        'placeholder': 'Şifre',
+        'placeholder': 'Password: ',
         'autocomplete':'off'
         }))
     password2 = forms.CharField(label='Yeniden Şifre', widget=forms.PasswordInput(attrs={
-        'placeholder': 'Şifreyi doğrulayın',
+        'placeholder': 'Password: ',
         'autocomplete':'off'
         }))
 
@@ -27,9 +27,9 @@ class itemForm(forms.ModelForm):
         model = item
         fields = ("name", "image", "number")
         labels = {
-            'name': 'Sensör İsmi',
-            'image': 'Sensör Tipi',
-            'number': 'Sensor Sayısı'
+            'name': 'Sensor name',
+            'image': 'Sensor type',
+            'number': 'Sensor number'
         }
 
     def __init__(self, *args, **kwargs):
@@ -44,9 +44,9 @@ class itemForm(forms.ModelForm):
         self.fields['number'].widget.attrs['autocomplete'] = 'off'
         
         placeholders = {
-            'name': 'Sensör ismi',
-            'image': 'Sensör tipi',
-            'number': 'Sensör sayısı'
+            'name': 'Sensor name',
+            'image': 'Sensor type',
+            'number': 'Sensor number'
         }
 
         for field_name, placeholder_text in placeholders.items():

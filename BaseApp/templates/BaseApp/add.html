@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    <title>Ürün Ekle</title>
+    <title>Add sensor</title>
     <link rel="stylesheet" href="{% static 'BaseApp/css/add.css' %}">
 {% endblock title %}
 
@@ -10,7 +10,7 @@
 <div class="container">
     <img src="{% static 'BaseApp/img/blackArduino.svg' %}" alt="Arduino Resmi">
     <div class="wrapper">
-      <div class="title"><span>Ekle</span></div>
+      <div class="title"><span>Add</span></div>
       <form method="post">
         {% csrf_token %}
         <div class="row">
@@ -28,7 +28,7 @@
         <div class="row button">
           <input type="submit" value="Ekle" style="text-align: center;">
         </div>
-        <div class="signup-link"><a href="{% url 'index' %}">Sensörler</a></div>
+        <div class="signup-link"><a href="{% url 'index' %}">Sensors</a></div>
       </form>
     </div>
   </div>
